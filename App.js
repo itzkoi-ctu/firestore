@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import firebase from 'firebase/compat/app';
+import { useEffect, useState } from 'react';
+import { StyleSheet, SafeAreaView,StatusBar,Text, View , FlatList, Button, TextInput, TextInputBase, TouchableOpacity} from 'react-native';
+import { db, firebaseConfig } from './FireBaseConfig';
+import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from 'firebase/firestore';
+import Infomation from './Infomation';
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  return(
+      <View style= {styles.container}>
+      </View>
+      
+    
+  )
 
-const styles = StyleSheet.create({
+}
+const styles= StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    justifyContent:"center",
+    flex: 1
+  }
+})
